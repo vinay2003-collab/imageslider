@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="lev2image.css">
+</head>
+
+<body>
+    <div class="page-header">
+        <img src="wsa-logo.svg">
+        <h1 class="project-title">Image Carousel</h1>
+    </div>
+    <section class="carousel-wrapper">
+        <div class="carousel-slides-container">
+            <button class="prev-btn" onclick="changeSlide(-1)">
+                <img src="arrow-prev.svg">
+            </button>
+            <img src="slide1.png" id="slide1" class="carousel-slide" onclick="openPopup()">
+            <img src="slide2.png" id="slide2" class="carousel-slide" onclick="openPopup1()">
+            <img src="slide3.png" id="slide3" class="carousel-slide" onclick="openPopup2()">
+
+            <button class="next-btn" onclick="changeSlide(1)">
+                <img src="arrow-next.svg">
+            </button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+        <div id="imagePopup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="popup-content">
+                <img id="popup-image">
+            </div>
+        </div>
+    </section>
+    <footer class="copyright-text">
+        <p>&copy;2023 WSA. All Rights Reserved</p>
+    </footer>
+    <script src="lev2image.js"></script>
+</body>
+
+</html>
